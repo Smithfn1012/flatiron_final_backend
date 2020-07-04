@@ -30,5 +30,7 @@ class Api::V1::AnimalsController < ApplicationController
         @animal = Animal.find(params[:id])
     end
 
-    
+    def animal_params
+        params.permit(:species, :lifespan, :size, :prey, :predators, :location, :other_info, :endangered, :biome_id, :image)
+    end
 end
