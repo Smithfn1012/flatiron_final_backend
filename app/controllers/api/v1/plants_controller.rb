@@ -18,4 +18,10 @@ class Api::V1::PlantsController < ApplicationController
         @plant.update(plant_params)
         render json: @plant
     end
+
+    def destroy
+        @plants = Plant.all
+        @plant.destroy
+        render json: @plants
+    end
 end
