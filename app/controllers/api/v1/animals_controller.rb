@@ -23,4 +23,12 @@ class Api::V1::AnimalsController < ApplicationController
         @animal.destroy
         render json: @animals
     end
+
+    private
+
+    def find_animal
+        @animal = Animal.find(params[:id])
+    end
+
+    
 end
