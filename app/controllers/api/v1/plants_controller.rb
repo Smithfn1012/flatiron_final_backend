@@ -5,4 +5,12 @@ class Api::V1::PlantsController < ApplicationController
         @plants = Plant.all
         render json: @plants
     end
+
+    def show
+    end
+
+    def create
+      @plant = Plant.create(plant_params)
+      render json: @plant
+    end
 end
