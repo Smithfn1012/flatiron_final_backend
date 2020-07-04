@@ -4,4 +4,12 @@ class Api::V1::CommentsController < ApplicationController
         @comments = Comment.all
         render json: @comments
     end
+
+    def show
+    end
+
+    def create
+        @comment = Comment.create(comment_params)
+        render json: @comment
+    end
 end
