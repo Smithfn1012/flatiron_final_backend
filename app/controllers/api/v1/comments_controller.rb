@@ -23,3 +23,9 @@ class Api::V1::CommentsController < ApplicationController
         @comment.destroy
         render json: @comments
     end
+
+    private
+
+    def find_comment
+        @comment = Comment.find(params[:id])
+    end
