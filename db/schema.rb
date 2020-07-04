@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_04_222948) do
+ActiveRecord::Schema.define(version: 2020_07_04_223114) do
 
   create_table "animals", force: :cascade do |t|
     t.string "species"
@@ -45,6 +45,14 @@ ActiveRecord::Schema.define(version: 2020_07_04_222948) do
     t.string "seed_distribution"
     t.string "other_info"
     t.integer "biome_id"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "question_answers", force: :cascade do |t|
+    t.string "question"
+    t.string "fact"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
