@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :choices
   resources :question_answers
   resources :biomes

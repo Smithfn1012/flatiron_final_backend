@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_04_223350) do
+ActiveRecord::Schema.define(version: 2020_07_04_223610) do
 
   create_table "animals", force: :cascade do |t|
     t.string "species"
@@ -41,6 +41,16 @@ ActiveRecord::Schema.define(version: 2020_07_04_223350) do
     t.string "item"
     t.boolean "answer"
     t.integer "question_answer_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "name"
+    t.string "comment"
+    t.string "animal_img"
+    t.integer "animal_id"
+    t.integer "plant_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
