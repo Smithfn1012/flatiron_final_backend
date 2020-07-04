@@ -1,4 +1,5 @@
 class Api::V1::CommentsController < ApplicationController
+    before_action :find_comment, only: [:show, :update, :destroy]
 
     def index
         @comments = Comment.all
