@@ -12,4 +12,8 @@ class Api::V1::CommentsController < ApplicationController
         @comment = Comment.create(comment_params)
         render json: @comment
     end
-end
+
+    def update
+        @comment.update(comment_params)
+        render json: @comment
+    end
