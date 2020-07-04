@@ -29,4 +29,8 @@ class Api::V1::BiomesController < ApplicationController
     def find_biome
         @biome = Biome.find(params[:id])
     end
+
+    def biome_params
+        params.permit(:biome_name, :temp_range, :ecosystems, :biodiversity, :image)
+    end
 end
