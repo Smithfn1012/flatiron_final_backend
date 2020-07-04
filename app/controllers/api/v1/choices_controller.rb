@@ -12,4 +12,10 @@ class Api::V1::ChoicesController < ApplicationController
         @choice = Choice.create(choice_params)
         render json: @choice
     end
+
+    private
+
+    def choice_params
+        params.permit(:id, :item, :answer, :question_answer_id)
+    end
 end
