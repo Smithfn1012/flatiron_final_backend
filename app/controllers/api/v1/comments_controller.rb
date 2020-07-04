@@ -17,3 +17,9 @@ class Api::V1::CommentsController < ApplicationController
         @comment.update(comment_params)
         render json: @comment
     end
+
+    def destroy
+        @comments = Comment.all
+        @comment.destroy
+        render json: @comments
+    end
