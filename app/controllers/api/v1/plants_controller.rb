@@ -13,4 +13,9 @@ class Api::V1::PlantsController < ApplicationController
       @plant = Plant.create(plant_params)
       render json: @plant
     end
+
+    def update
+        @plant.update(plant_params)
+        render json: @plant
+    end
 end
