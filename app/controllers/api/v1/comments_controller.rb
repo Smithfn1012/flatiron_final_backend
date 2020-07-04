@@ -29,3 +29,8 @@ class Api::V1::CommentsController < ApplicationController
     def find_comment
         @comment = Comment.find(params[:id])
     end
+
+    def comment_params
+        params.permit(:name, :comment, :animal_tag, :animal_id, :plant_id)
+    end
+end
