@@ -24,4 +24,10 @@ class Api::V1::PlantsController < ApplicationController
         @plant.destroy
         render json: @plants
     end
+
+    private
+
+    def find_plant
+        @plant = Plant.find(params[:id])
+    end
 end
