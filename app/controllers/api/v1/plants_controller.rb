@@ -1,5 +1,5 @@
 class Api::V1::PlantsController < ApplicationController
-
+  before_action :find_plant, only: [:show, :update, :destroy]
 
     def index
         @plants = Plant.all
