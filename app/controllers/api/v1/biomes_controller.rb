@@ -12,4 +12,9 @@ class Api::V1::BiomesController < ApplicationController
         @biome = Biome.create(biome_params)
         render json: @biome
     end
+
+    def update
+        @biome.update(biome_params)
+        render json: @biome
+    end
 end
