@@ -17,4 +17,10 @@ class Api::V1::BiomesController < ApplicationController
         @biome.update(biome_params)
         render json: @biome
     end
+
+    def destroy
+        @biomes = Biome.all
+        @biome.destroy
+        render json: @biomes
+    end
 end
