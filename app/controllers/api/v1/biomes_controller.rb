@@ -23,4 +23,10 @@ class Api::V1::BiomesController < ApplicationController
         @biome.destroy
         render json: @biomes
     end
+
+    private
+
+    def find_biome
+        @biome = Biome.find(params[:id])
+    end
 end
