@@ -17,4 +17,10 @@ class Api::V1::AnimalsController < ApplicationController
         @animal.update(animal_params)
         render json: @animal
     end
+
+    def destroy
+        @animals = Animal.all
+        @animal.destroy
+        render json: @animals
+    end
 end
