@@ -1,2 +1,0 @@
-class BiomesController < ApplicationController
-end
