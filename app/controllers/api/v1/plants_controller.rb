@@ -30,4 +30,8 @@ class Api::V1::PlantsController < ApplicationController
     def find_plant
         @plant = Plant.find(params[:id])
     end
+
+    def plant_params
+        params.permit(:species, :size, :predators, :location, :seed_distribution, :other_info, :biome_id, :image)
+    end
 end
