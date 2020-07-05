@@ -1,4 +1,4 @@
-class Api::V1::BiomesController < ApplicationController
+class BiomesController < ApplicationController
 
     def index
         @biomes = Biome.all

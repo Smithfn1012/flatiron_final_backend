@@ -1,4 +1,4 @@
-class Api::V1::ChoicesController < ApplicationController
+class ChoicesController < ApplicationController
 
     def index
         @choices = Choice.all

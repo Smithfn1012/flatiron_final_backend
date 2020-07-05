@@ -1,4 +1,4 @@
-class Api::V1::QuestionAnswersController < ApplicationController
+class QuestionAnswersController < ApplicationController
     before_action :find_question_answer, only: [:show, :update]
   
     def index

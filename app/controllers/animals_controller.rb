@@ -1,4 +1,4 @@
-class Api::V1::AnimalsController < ApplicationController
+class AnimalsController < ApplicationController
     before_action :find_animal, only: [:show, :update, :destroy]
 
     def index

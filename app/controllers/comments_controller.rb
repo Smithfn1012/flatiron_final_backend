@@ -1,4 +1,4 @@
-class Api::V1::CommentsController < ApplicationController
+class CommentsController < ApplicationController
     before_action :find_comment, only: [:show, :update, :destroy]
 
     def index
