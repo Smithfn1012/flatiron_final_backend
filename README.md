@@ -1,4 +1,7 @@
 # README
+here is that repository link to connect to my frontend. 
+https://github.com/Smithfn1012/flatiron_final_frontend
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
